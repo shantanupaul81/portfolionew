@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import { AiFillOpenAI } from "react-icons/ai";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +14,10 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
                     <div className="flex items-center">
-                        <Link href="/">
-                            <span className="text-xl font-bold text-gray-800 cursor-pointer uppercase" style={{ fontFamily: "Poppins", fontWeight: 400 }}>Shantanu Paul</span>
+                        <Link href="/" className='flex items-center justify-center gap-1'>
+                        <AiFillOpenAI size={40}/>
+                        <p className='uppercase font-bold'>Portfolio</p>
+                            {/* <span className="text-xl font-bold text-gray-800 cursor-pointer uppercase" style={{ fontFamily: "Poppins", fontWeight: 400 }}>Shantanu Paul</span> */}
                         </Link>
                     </div>
 
