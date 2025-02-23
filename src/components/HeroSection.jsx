@@ -4,8 +4,11 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { Bio } from '@/data/constants';
 
-const roles = ['Software Engineer', 'MERN Stack Developer', 'WordPress Developer'];
+
+
+const roles = ["Software Engineer","Full Stack Developer","MERN Stack Developer","WordPress Developer", "Programmer"];
 
 export default function HeroSection() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -18,7 +21,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between p-10 max-w-7xl mx-auto py-20">
+    <section className="flex flex-col-reverse md:flex-row items-center justify-between p-10 max-w-7xl mx-auto sm:py-20">
       {/* Left Side Content */}
       <motion.div 
         initial={{ opacity: 0, x: -50 }} 
@@ -26,8 +29,8 @@ export default function HeroSection() {
         transition={{ duration: 0.8 }}
         className="md:w-1/2 text-center md:text-left"
       >
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-          Shantanu Paul
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white uppercase">
+         {Bio.name}
         </h1>
 
         <div className="h-10 overflow-hidden mt-2">
@@ -45,10 +48,10 @@ export default function HeroSection() {
           </AnimatePresence>
         </div>
 
-        <p className="text-gray-600 dark:text-gray-300 mt-4">
-          Passionate about building scalable web applications and creating delightful user experiences.
+        <p className="text-gray-600 dark:text-gray-300 mt-4 text-start">
+          {Bio.description}
         </p>
-        <a href="/resume.pdf" download>
+        <a href={Bio.resume} download>
           <Button className="mt-6 px-6 py-3 text-white bg-blue-600 hover:bg-blue-700">
             Download Resume
           </Button>

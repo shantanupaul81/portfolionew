@@ -17,17 +17,17 @@ export default function ContactUs() {
           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col items-center">
             <FaEnvelope size={30} className="text-blue-500" />
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mt-4">Email</h3>
-            <p className="text-gray-600 dark:text-gray-300 mt-2">contact@example.com</p>
+            <p className="text-gray-600 dark:text-gray-300 mt-2">paulshantanu18@gmail.com</p>
           </div>
           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col items-center">
             <FaPhone size={30} className="text-green-500" />
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mt-4">Phone</h3>
-            <p className="text-gray-600 dark:text-gray-300 mt-2">+123 456 7890</p>
+            <p className="text-gray-600 dark:text-gray-300 mt-2">+919905301667</p>
           </div>
           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col items-center">
             <FaMapMarkerAlt size={30} className="text-red-500" />
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mt-4">Location</h3>
-            <p className="text-gray-600 dark:text-gray-300 mt-2">123 Main St, City, Country</p>
+            <p className="text-gray-600 dark:text-gray-300 mt-2">Delhi,India</p>
           </div>
         </motion.div>
       </div>

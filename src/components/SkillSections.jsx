@@ -1,12 +1,17 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import { 
-  FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaDatabase, FaGitAlt, 
-  FaDocker, FaAws, FaLinux, FaSlack, FaUsers, FaLightbulb, FaComments 
+  FaReact,FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaDatabase, FaGitAlt, 
+  FaDocker, FaAws, FaLinux, FaSlack, FaUsers, FaLightbulb, FaComments ,FaGithub
 } from 'react-icons/fa';
+import { RiNextjsFill,RiBootstrapFill,RiTailwindCssFill ,RiMastercardFill,RiVercelFill} from "react-icons/ri";
+import { SiRedux ,SiExpress,SiRender,SiPostman} from "react-icons/si";
+import { BiLogoNetlify } from "react-icons/bi";
+import { VscVscode } from "react-icons/vsc";
+
+
+
+
 
 export default function SkillSections() {
   return (
@@ -19,13 +24,22 @@ export default function SkillSections() {
             As a MERN stack developer, I specialize in building full-stack web applications using modern technologies.
           </p>
           
-          {/* Frontend Skills */}
-          <div className="mb-12">
+         <div className='grid sm:grid-cols-2 grid-cols-1 gap-2'>
+           {/* Frontend Skills */}
+           <div className="mb-2 border border-gray-500 p-2 rounded-lg">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Frontend Skills</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 text-gray-800 dark:text-white">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-gray-800 dark:text-white">
               <div className="flex flex-col items-center">
                 <FaReact size={50} className="text-blue-500" />
                 <span className="mt-2">React</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <RiNextjsFill size={50} className="text-blue-500" />
+                <span className="mt-2">Next</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <SiRedux size={50} className="text-blue-500" />
+                <span className="mt-2">Redux Tool Kit</span>
               </div>
               <div className="flex flex-col items-center">
                 <FaHtml5 size={50} className="text-orange-500" />
@@ -39,11 +53,23 @@ export default function SkillSections() {
                 <FaJs size={50} className="text-yellow-400" />
                 <span className="mt-2">JavaScript</span>
               </div>
+              <div className="flex flex-col items-center">
+                <RiBootstrapFill size={50} className="text-yellow-400" />
+                <span className="mt-2">Bootstrap</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <RiTailwindCssFill size={50} className="text-yellow-400" />
+                <span className="mt-2">Tailwind CSS</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <RiMastercardFill size={50} className="text-yellow-400" />
+                <span className="mt-2">Material UI</span>
+              </div>
             </div>
           </div>
 
           {/* Backend Skills */}
-          <div className="mb-12">
+          <div className="mb-2 border border-gray-500 p-2 rounded-lg">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Backend Skills</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 text-gray-800 dark:text-white">
               <div className="flex flex-col items-center">
@@ -55,14 +81,49 @@ export default function SkillSections() {
                 <span className="mt-2">MongoDB</span>
               </div>
               <div className="flex flex-col items-center">
+                <SiExpress size={50} className="text-yellow-500" />
+                <span className="mt-2">Express js</span>
+              </div>
+              <div className="flex flex-col items-center">
                 <FaGitAlt size={50} className="text-red-500" />
                 <span className="mt-2">Git</span>
               </div>
             </div>
           </div>
 
+            {/* Others Skills */}
+            <div className="mb-2 border border-gray-500 p-2 rounded-lg">
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Others Skills</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 text-gray-800 dark:text-white">
+              <div className="flex flex-col items-center">
+                <FaGithub size={50} className="text-blue-500" />
+                <span className="mt-2">Github</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <BiLogoNetlify size={50} className="text-orange-500" />
+                <span className="mt-2">Netlify</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <RiVercelFill size={50} className="text-gray-600" />
+                <span className="mt-2">Vercel</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <SiRender size={50} className="text-gray-600" />
+                <span className="mt-2">Render</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <VscVscode size={50} className="text-gray-600" />
+                <span className="mt-2">Vs code</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <SiPostman size={50} className="text-gray-600" />
+                <span className="mt-2">Postman</span>
+              </div>
+            </div>
+          </div>
+
           {/* DevOps Skills */}
-          <div className="mb-12">
+          <div className="mb-2 border border-gray-500 p-2 rounded-lg">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">DevOps Skills</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 text-gray-800 dark:text-white">
               <div className="flex flex-col items-center">
@@ -81,7 +142,7 @@ export default function SkillSections() {
           </div>
 
           {/* Soft Skills */}
-          <div>
+          <div className='mb-2 border border-gray-500 p-2 rounded-lg'>
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Soft Skills</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 text-gray-800 dark:text-white">
               <div className="flex flex-col items-center">
@@ -98,6 +159,7 @@ export default function SkillSections() {
               </div>
             </div>
           </div>
+         </div>
         </div>
       </section>
     </>
